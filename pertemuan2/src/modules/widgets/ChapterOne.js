@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import background from "../assets/gambar.jpg"; 
+import background from "../../assets/gambar.jpg"; 
+import MesseggersUI from "./messagers/MesseggersUI";
 
 export default class ChapterOne extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class ChapterOne extends Component {
         <h1 className="text-center text-white fw-bold">
           Chapter One: The Beginning
         </h1>
+        <MesseggersUI/>
       </div>
     );
   }

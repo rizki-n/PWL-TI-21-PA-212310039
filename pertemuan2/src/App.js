@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import LayoutUI from './LatihanMessangger/LayoutUI';
 import LayoutInit from './LatihanMessangger/LayoutInit';
 import { BrowserRouter } from 'react-router-dom';
+import BaseRoute from './apps/BaseRoute';
 
 function App() {
   return (
     <BrowserRouter>
       <LayoutInit>
-        
+        <BaseRoute/>
       </LayoutInit>
     </BrowserRouter>
   );
