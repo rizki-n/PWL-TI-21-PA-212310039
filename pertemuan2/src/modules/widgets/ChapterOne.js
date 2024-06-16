@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import background from "../../assets/gambar.jpg"; 
-import MesseggersUI from "./messagers/MesseggersUI";
+import MesseggersUI from "../Chapter2/widgets/messagers/MesseggersUI";
 
 export default class ChapterOne extends Component {
   render() {

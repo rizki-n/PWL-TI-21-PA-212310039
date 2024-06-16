@@ -2,6 +2,7 @@
 import Headers from './Headers';
 import Footer from './Footer';
 import ChapterOne from '../modules/widgets/ChapterOne';
+import { Children } from 'react';
 
 const LayoutInit = ({children}) => {
     return (
@@ -13,7 +14,7 @@ const LayoutInit = ({children}) => {
                                 
                     <section className="">
                         <div className=""> 
-                            <ChapterOne/> {/* untuk isiannya */}
+                            {children} {/* untuk isiannya */}
                         </div>
                     </section>
 
