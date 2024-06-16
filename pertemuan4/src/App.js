@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import LayoutInit from "./components/LayoutInit";
+import { BrowserRouter } from "react-router-dom";
+import BaseRoute from "./apps/BaseRoute";
+import Sentiment from "sentiment";
 
 function App() {
+  const sentiment = new Sentiment();
+  const teks = "Saya sangat senang hari ini!";
+  const hasilAnalisis = sentiment.analyze(teks);
+  console.log("Teks:", teks);
+  console.log("Skor:", hasilAnalisis.score);
+  console.log("Klasifikasi:", hasilAnalisis.score > 0 ? "Positif" :
+  hasilAnalisis.score < 0 ? "Negatif" : "Netral");
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <BaseRoute />
+    </BrowserRouter>
   );
 }
 
