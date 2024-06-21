@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TableOrder from './tableOrder';
+import ChartAnalytic from './chartAnalytic';
 
 class AdminPage extends Component {
     render() {
@@ -13,9 +14,8 @@ class AdminPage extends Component {
             <TableOrder/> 
             </section>
         </div>
-
         <div>
-            
+            <ChartAnalytic/>            
         </div>
         
       </div>

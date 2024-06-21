@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const customerSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -24,7 +25,7 @@ const customerSchema = new mongoose.Schema({
         type: Number,
         required: true
     }
-});
+}, { timestamps: true });  // Menambahkan timestamps
 
 const customers = new mongoose.model('customers', customerSchema);
 

@@ -5,14 +5,18 @@ const {
   getCustomerById,
   postCustomers,
   updateCustomer,
-  deleteCustomer
+  deleteCustomer,
+  getOrderStats,
+  getDailyOrderStats
 } = require("../controllers/customerController.js");
 const customers = require("../models/customerSchema");
 
 router.get("/fetch-all", getCustomers);
 router.get("/fetch/:id", getCustomerById);
 router.post("/create", postCustomers);
-router.patch("/update/:id", updateCustomer);
-router.post("/delete/:id", deleteCustomer);
+router.put("/update/:id", updateCustomer);
+router.delete("/delete/:id", deleteCustomer);
+// router.get("/order-stats", getOrderStats);
+router.get("/order-stats", getDailyOrderStats);
 
 module.exports = router;
